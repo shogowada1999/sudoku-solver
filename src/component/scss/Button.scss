@@ -1,0 +1,57 @@
+@import '../../scss/common';
+
+button{
+    border: $mainBorder;
+    padding: space(.5);
+    border-radius: $radius !important;
+    background-color: $mainColor;
+    color: $textColor;
+
+    @media #{$smartphone}{
+        min-width: 110px;
+        font-size: 15px !important;
+        margin: 0 space(.5) $space !important;
+    }
+
+    @media #{$small}{
+        transition-duration: .1s;
+    }
+
+    @media #{$tablet}{
+
+    }
+
+    @media #{$large}{
+        min-width: 170px;
+        max-width: 220px;
+        font-size: 18px !important;
+        margin: 0 space(.5) $space !important;
+    }
+
+    @media #{$pc}{
+        transition-duration: .3s;
+    }
+
+    &.active{
+        border-color: $accentColor;
+        color: $accentColor;
+        background-color: $lightColor;
+    }
+
+    &.inactive:hover{
+        color: $textColor2;
+        background-color: $accentColor;
+
+        @media #{$tablet}{
+            transition-duration: .1s;
+        }
+
+        @media #{$pc}{
+            transition-duration: .3s;
+        }
+    }
+
+    &.normal{
+        @include button-hover;
+    }
+}

@@ -1,0 +1,41 @@
+@import '../../scss/common';
+
+.Comment{
+    background-color: #606060;
+    text-align: center;
+    color: $textColor;
+    padding: space(.25);
+    border-radius: $radius;
+    margin-bottom: space(2);
+
+    @media #{$smartphone}{
+        margin-top: 0;
+    }
+
+    @media #{$large}{
+        margin-top: space(2);
+    }
+
+    .inner{
+        border: dotted 3px $accentColor;
+        border-radius: $radius;
+        padding: space(.5);
+        display: table;
+        height: 60px;
+        width: 100%;
+    }
+
+    p{
+        display: table-cell;
+        vertical-align: middle;
+
+        @media #{$smartphone}{
+            font-size: 15px;
+        }
+
+        @media #{$large}{
+            font-size: 18px;
+        }
+    }
+
+}

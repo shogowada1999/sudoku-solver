@@ -1,0 +1,32 @@
+@import '../../scss/common';
+
+.Card{
+    background-color: $lightColor;
+    border-radius: $radius;
+    padding: $space;
+    height: 100%;
+    color: $textColor2;
+
+    h2{
+        border-bottom: $decoration;
+        padding: space(.5) 0 space(.5) $space;
+        margin-bottom: $space;
+    }
+
+    svg{
+        color: $accentColor;
+        margin-right: space(.5);
+    }
+
+    li{
+        line-height: 2em;
+
+        @media #{$smartphone}{
+            font-size: 17px;
+        }
+
+        @media #{$large}{
+            font-size: 18px;
+        }
+    }
+}

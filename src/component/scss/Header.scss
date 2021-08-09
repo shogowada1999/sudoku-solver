@@ -1,0 +1,39 @@
+@import "../../scss/common";
+
+header{
+    color: $textColor;
+
+    .container-fluid{
+        &:first-child{
+            @media #{$smartphone}{
+                border-radius: $radius;
+                border: $mainBorder;
+            }
+
+            @media #{$large}{
+                border-top-left-radius: $radius;
+                border-top-right-radius: $radius;
+            }
+        }
+
+        &:last-child{
+            @media #{$smartphone}{
+                padding: 0;
+                margin-top: $space;
+            }
+        }
+    }
+
+    h1{
+        text-align: center;
+        margin: space(.5) auto;
+
+        @media #{$smartphone}{
+            font-size: 30px;
+        }
+
+        @media #{$large}{
+            font-size: 40px;
+        }
+    }
+}

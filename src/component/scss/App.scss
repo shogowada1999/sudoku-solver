@@ -1,0 +1,9 @@
+// Import
+@import "../../scss/common";
+
+.container-fluid{
+    @media #{$large}{
+        border: $mainBorder;
+        border-bottom: none;
+    }
+}

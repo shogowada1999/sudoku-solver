@@ -1,0 +1,19 @@
+@import '../../scss/common';
+
+.Left{
+    display: flex;
+    align-items: center;
+    margin-bottom: space(2);
+
+    @media #{$small}{
+        text-align: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    @media #{$pc}{
+        text-align: right;
+        flex-direction: column;
+    }
+}
