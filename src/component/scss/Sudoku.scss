@@ -1,0 +1,116 @@
+@import '../../scss/common';
+
+.Sudoku{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: space(2);
+    color: $textColor2;
+
+    .sudoku-row{
+        display: flex;
+
+        &:nth-child(3n){
+            .block{
+                border-bottom: solid 3px $baseColor;
+            }
+        }
+
+        &:nth-child(3n+1){
+            .block{
+                border-top: solid 3px $baseColor;
+            }
+        }
+
+        &:first-child{
+            .block{
+                border-top: solid 1px $baseColor;
+
+                &:first-child{
+                    border-top-left-radius: 10px;
+                }
+
+                &:last-child{
+                    border-top-right-radius: 10px;
+                }
+            }
+        }
+
+        &:last-child{
+            .block{
+                border-bottom: solid 1px $baseColor;
+
+                &:first-child{
+                    border-bottom-left-radius: 10px;
+                }
+
+                &:last-child{
+                    border-bottom-right-radius: 10px;
+                }
+            }
+        }
+    }
+
+    .block{
+        background-color: $lightColor;
+        border: solid 1px $baseColor;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media #{$smartphone}{
+            height: 40px;
+            width: 40px;
+            padding: 1px;
+            font-size: 25px;
+        }
+
+        @media #{$tablet}{
+            height: 50px;
+            width: 50px;
+            padding: 1px;
+            font-size: 29px;
+        }
+
+        @media #{$pc}{
+            height: 60px;
+            width: 60px;
+            padding: 1px;
+            font-size: 33px;
+        }
+
+        &:nth-child(3n){
+            border-right: solid 3px $baseColor;
+        }
+
+        &:nth-child(3n+1){
+            border-left: solid 3px $baseColor;
+        }
+
+        &:first-child{
+            border-left: solid 1px $baseColor;
+        }
+
+        &:last-child{
+            border-right: solid 1px $baseColor;
+        }
+    }
+
+    .inserted{
+        background-color: $accentColor;
+    }
+
+    form{
+        width: 100%;
+        height: 100%;
+        padding: 0;
+    }
+
+    input{
+        width: 100%;
+        height: 100%;
+        font-size: 25px;
+        text-align: center;
+        margin: auto;
+    }
+}

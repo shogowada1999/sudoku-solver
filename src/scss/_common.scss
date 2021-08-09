@@ -1,0 +1,105 @@
+$small: "only screen and (max-width: 1199px)";
+$large: "only screen and (min-width: 768px)";
+$extra: "only screen and (min-width: 1400px)";
+$smartphone: "only screen and (max-width:767px)";
+$tablet: "only screen and (min-width: 768px) and (max-width: 1199px)";
+$pc: "only screen and (min-width: 1200px)";
+
+$baseColor: #455A64;
+$mainColor: #607D8B;
+$accentColor: #00BCD4;
+$lightColor: #CFD8DC;
+$floatColor: #fffdf5;
+$textColor: #FFFFFF;
+$textColor2: #212121;
+$linkColor1: #1972cc;
+$linkColor2: #664d27;
+$dividerColor: #BDBDBD;
+
+$fontA: 'RussoOne', sans-serif;
+$fontB: 'Noto Sans JP', sans-serif;
+$fontC: 'RussoOne', 'Noto Sans JP', sans-serif;
+
+$space: 20px;
+$radius: 20px;
+
+$mainBorder: solid 4px $dividerColor;
+$decoration: dotted 7px $accentColor;
+
+@function space($scale) {
+    @return $space*$scale;
+}
+
+@mixin link-hover(){
+    @media #{$small}{
+        transition: color .1s;
+    }
+
+    @media #{$pc}{
+        transition: color .3s;
+    }
+
+    &:hover{
+        color: $accentColor;
+
+        @media #{$tablet}{
+            transition: color .1s;
+        }
+
+        @media #{$pc}{
+            transition: color .3s;
+        }
+    }
+}
+
+@mixin button-hover{
+    @media #{$small}{
+        transition-duration: .1s;
+    }
+
+    @media #{$pc}{
+        transition-duration: .3s;
+    }
+
+    &:hover{
+        color: $textColor2;
+        background-color: $accentColor;
+
+        @media #{$tablet}{
+            transition-duration: .1s;
+        }
+
+        @media #{$pc}{
+            transition-duration: .3s;
+        }
+    }
+}
+
+@mixin nav-hover{
+    @media #{$small}{
+        transition-duration: .1s;
+    }
+
+    @media #{$pc}{
+        transition-duration: .3s;
+    }
+
+    &.active{
+        border-color: $accentColor;
+        color: $accentColor;
+        background-color: $lightColor;
+    }
+
+    &.inactive:hover{
+        color: $textColor2;
+        background-color: $accentColor;
+
+        @media #{$tablet}{
+            transition-duration: .1s;
+        }
+
+        @media #{$pc}{
+            transition-duration: .3s;
+        }
+    }
+}

@@ -1,0 +1,115 @@
+@import "../../scss/common";
+
+footer{
+    .container-fluid{
+        &:first-child{
+            .share-text{
+                text-align: center;
+                color: $textColor;
+                margin: 10px 0;
+            }
+            .share-btns{
+                display: flex;
+                justify-content: center;
+                margin-bottom: $space;
+                margin-bottom: 30px;
+            }
+
+            .share-btn{
+                margin: 0 5%;
+                height: 50px;
+                width: 50px;
+                border-radius: 5px;
+                background-color: $lightColor;
+                text-align: center;
+
+                svg{
+                    height: 50px;
+                    width: 50px;
+                }
+            }
+
+
+
+            .btn-twitter{
+                color: #00aced;
+            }
+
+            .btn-line{
+                color: #00b900;
+            }
+
+            a{
+                @include link-hover;
+            }
+        }
+
+        &:nth-child(2){
+            .wrap{
+                @media #{$smartphone}{
+                    margin-bottom: $space;
+                    padding: 0;
+                }
+
+                @media #{$large}{
+                    padding: $space;
+
+                    &:first-child{
+                        border-right: solid 2px $dividerColor;
+                    }
+
+                    &:last-child{
+                        border-left: solid 2px $dividerColor;
+                    }
+                }
+            }
+        }
+
+        &:last-child{
+            background-color: $dividerColor;
+
+            @media #{$smartphone}{
+                border-radius: $radius;
+            }
+
+            @media #{$large}{
+                border-bottom-left-radius: 20px;
+                border-bottom-right-radius: 20px;
+                border-bottom: $mainBorder;
+            }
+
+            .credit{
+                text-align: center;
+                padding: $space;
+            }
+
+            .icon-box{
+                display: inline-flex;
+                justify-content: flex-end;
+                align-items: center;
+                padding-top: 5px;
+                padding-right: $space;
+
+                a{
+                    @include link-hover;
+
+                    color: $textColor2;
+                }
+
+                svg{
+                    height: 40px;
+                    width: 40px;
+                }
+            }
+        }
+    }
+
+    small{
+        color: $textColor2;
+    }
+
+    .credit-link{
+        color: $textColor2;
+        @include link-hover;
+    }
+}

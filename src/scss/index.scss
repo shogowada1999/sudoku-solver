@@ -1,0 +1,28 @@
+@import "common";
+
+// Font Include
+@font-face{
+    font-family: 'RussoOne';
+    src: url('./webfonts/RussoOne-Regular.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face{
+    font-family: 'Noto Sans JP';
+    src: url('./webfonts/NotoSansJP-Medium.otf') format("opentype");
+    font-display: swap;
+}
+
+body{
+    background-color: $baseColor !important;
+    color: $textColor;
+    font-family: $fontC !important;
+
+    @media #{$small}{
+        padding: $space;
+    }
+
+    @media #{$large}{
+        padding: 2%;
+    }
+}

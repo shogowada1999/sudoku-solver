@@ -1,0 +1,1 @@
+.Card{background-color:#CFD8DC;border-radius:20px;padding:20px;height:100%;color:#212121}.Card h2{border-bottom:dotted 7px #00BCD4;padding:10px 0 10px 20px;margin-bottom:20px}.Card svg{color:#00BCD4;margin-right:10px}.Card li{line-height:2em}@media only screen and (max-width: 767px){.Card li{font-size:17px}}@media only screen and (min-width: 768px){.Card li{font-size:18px}}
